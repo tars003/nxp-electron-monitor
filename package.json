@@ -1,0 +1,55 @@
+{
+  "name": "electron-serialport",
+  "productName": "DRESPL Monitor",
+  "version": "1.0.2",
+  "description": "RMPU Microcontroller Monitoring Software",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "drespl-monitor",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "./icon.ico",
+      "uninstallerIcon": "./icon.ico",
+      "uninstallDisplayName": "DRESPL Monitor",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:serialport/electron-serialport.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^17.0.0",
+    "electron-builder": "^23.0.3",
+    "electron-windows-installer": "^1.7.8",
+    "electron-winstaller": "^5.0.0"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "gulp": "^4.0.2",
+    "node-table-to-csv": "^0.1.0",
+    "serialport": "^10.4.0",
+    "tableify": "^1.1.1"
+  }
+}
